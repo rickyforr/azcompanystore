@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./app.css";
+import Products from "./products/products.component";
+
+const products = [
+  { id: "1", name: "shirt", price: 10, imageUrl: "https://www.louisvuitton.com/images/HIY49WTCL648_PM2_Front%20view" },
+  { id: "2", name: "pants", price: 10, imageUrl: "https://www.louisvuitton.com/images/HIY49WTCL648_PM2_Front%20view" },
+  { id: "3", name: "shoes", price: 10, imageUrl: "https://www.louisvuitton.com/images/HIY49WTCL648_PM2_Front%20view" },
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Products products={products} />
     </div>
   );
 }
