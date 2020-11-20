@@ -1,3 +1,7 @@
+import { CartItemType } from "../../cart/cart.props.interface";
+import { ProductType } from "../products.component";
+
 export interface IProductProps {
-product: { id: string, name: string, price: number, imageUrl: string }
+  product: ProductType;
+  addToCart: (cartItem: CartItemType) => void;
 }

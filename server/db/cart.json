@@ -1,0 +1,32 @@
+{
+  "carts": {
+    "1": [
+      {
+        "name": "shirt",
+        "price": 2.5,
+        "imageUrl": "https://www.louisvuitton.com/images/HIY49WTCL648_PM2_Front%20view",
+        "id": "1"
+      },
+      {
+        "name": "pants",
+        "price": 3,
+        "imageUrl": "https://www.louisvuitton.com/images/HIY49WTCL648_PM2_Front%20view",
+        "id": "2"
+      },
+      {
+        "name": "shoes",
+        "price": 4,
+        "imageUrl": "https://www.louisvuitton.com/images/HIY49WTCL648_PM2_Front%20view",
+        "id": "3"
+      }
+    ],
+    "2": [
+      {
+        "id": "4",
+        "name": "hat",
+        "price": 3,
+        "quantity": 4
+      }
+    ]
+  }
+}
