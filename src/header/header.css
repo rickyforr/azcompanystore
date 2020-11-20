@@ -1,0 +1,12 @@
+.header-container {
+  background-color: #201564;
+  box-shadow: 1px 1px 2px 1px #0000003d;
+  min-height: 50px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+}

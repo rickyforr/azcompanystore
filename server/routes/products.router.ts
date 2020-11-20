@@ -14,26 +14,6 @@ export interface ICarts {
   };
 }
 
-const readFile = (callback: any, filePath: string, encoding = "utf8") => {
-  fs.readFile(filePath, encoding, (err, data) => {
-    if (err) {
-      throw err;
-    }
-
-    callback(JSON.parse(data));
-  });
-};
-
-const writeFile = (fileData: any, callback: any, filePath: string, encoding = "utf8") => {
-  fs.writeFile(filePath, fileData, encoding, (err) => {
-    if (err) {
-      throw err;
-    }
-
-    callback();
-  });
-};
-
 const productsRoutes = (app: express.Application) => {
   app.get("/api/products", (req, res) => {
     const dataPath = "./db/products.json";

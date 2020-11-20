@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Button from "../../button/button.component";
 import { ICartItemProps } from "./cart-item.props.interface";
 
 /**
@@ -23,14 +24,20 @@ const CartItem: React.FunctionComponent<ICartItemProps> = (props) => {
 
   return (
     <>
-      <td>{props.cartItem.name}</td>
-      <td>${props.cartItem.price}</td>
-      <td>
-        <input type="number" defaultValue={props.cartItem.quantity} onChange={(e) => updateQuantity(e.target.value)} value={quantity}></input>
+      <td className="cart-table-cell">{props.cartItem.name}</td>
+      <td className="cart-table-cell">${props.cartItem.price}</td>
+      <td className="cart-table-cell">
+        <input
+          style={{ maxWidth: "100px", border: "1px solid #dedede", padding: "5px" }}
+          type="number"
+          defaultValue={props.cartItem.quantity}
+          onChange={(e) => updateQuantity(e.target.value)}
+          value={quantity}
+        ></input>
       </td>
-      <td>${props.cartItem.price * quantity}</td>
-      <td>
-        <button onClick={(e) => removeItem(props.cartItem.id)}>Remove</button>
+      <td className="cart-table-cell">${props.cartItem.price * quantity}</td>
+      <td style={{ paddingLeft: "10px" }}>
+        <Button onClick={() => props.removeItem(props.cartItem.id)} text="Remove" />
       </td>
     </>
   );

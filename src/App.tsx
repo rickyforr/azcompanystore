@@ -3,6 +3,7 @@ import "./app.css";
 import { addItem, removeItem, updateItemQuantity } from "./app.utils";
 import Cart from "./cart/cart.component";
 import { CartItemType } from "./cart/cart.props.interface";
+import Header from "./header/header.component";
 import Products from "./products/products.component";
 
 /**
@@ -25,8 +26,11 @@ const App = () => {
 
   return (
     <div className="App">
-      <Products addToCart={addToCart} />
-      <Cart cart={cart} updateQuantity={updateQuantity} removeItem={removeItemFromCart} />
+      <Header />
+      <div className="product-cart-container">
+        <Products addToCart={addToCart} />
+        <Cart cart={cart} updateQuantity={updateQuantity} removeItem={removeItemFromCart} />
+      </div>
     </div>
   );
 };

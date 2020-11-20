@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../button/button.component";
 import "./product.css";
 import { IProductProps } from "./product.props.interface";
 
@@ -20,11 +21,11 @@ const Product: React.FunctionComponent<IProductProps> = (props) => {
   return (
     <div className="product-container">
       <img className="image" src={props.product.imageUrl}></img>
-      <span>{props.product.name}</span>
-      <span>${props.product.price}</span>
-      <button className="add-button" onClick={() => addToCart()}>
-        Add
-      </button>
+      <span className="product-name">{props.product.name}</span>
+      <span className="product-price"> ${props.product.price}</span>
+      <span className="add-button-container">
+        <Button text="Add" onClick={addToCart}></Button>
+      </span>
     </div>
   );
 };

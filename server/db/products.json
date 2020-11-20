@@ -1,5 +1,12 @@
-{ "products" : [
-    { "name": "shirt", "price" : 2.50, "imageUrl": "https://www.louisvuitton.com/images/HIY49WTCL648_PM2_Front%20view", "id": "1"},
-    { "name": "pants", "price" : 3, "imageUrl": "https://www.louisvuitton.com/images/HIY49WTCL648_PM2_Front%20view","id": "2"},
-    { "name": "shoes", "price" : 4, "imageUrl": "https://www.louisvuitton.com/images/HIY49WTCL648_PM2_Front%20view","id": "3"}
-  ]}
+{
+  "products": [
+    { "name": "shirt", "price": 25, "imageUrl": "https://res.cloudinary.com/lyvtg7cjl/image/upload/v1605854730/image4493_ccgmfi.png", "id": "1" },
+    {
+      "name": "pants",
+      "price": 30,
+      "imageUrl": "https://res.cloudinary.com/lyvtg7cjl/image/upload/v1605854730/image4510_lezbjn.png",
+      "id": "2"
+    },
+    { "name": "shoes", "price": 50, "imageUrl": "https://res.cloudinary.com/lyvtg7cjl/image/upload/v1605854730/image4521_gypphx.png", "id": "3" }
+  ]
+}

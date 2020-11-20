@@ -20,4 +20,4 @@ export const writeFile = (fileData: any, callback: any, filePath: string, encodi
   });
 };
 
-module.exports = { writeFile, readFile };
+export default { writeFile, readFile };

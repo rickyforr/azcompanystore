@@ -3,6 +3,7 @@ import Product from "./product/product.component";
 import "./products.css";
 import Axios from "axios";
 import { CartItemType } from "../cart/cart.props.interface";
+import Button from "../button/button.component";
 
 export type ProductType = { id: string; name: string; price: number; imageUrl: string };
 
@@ -39,16 +40,30 @@ const Products: React.FunctionComponent<{ addToCart: (cartItem: CartItemType) =>
     fetchProducts();
   }, []);
 
+  const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      searchProducts();
+    }
+  };
+
   return (
     <div id="products" className="products">
+      <div className="search">
+        <input
+          className="search-input"
+          type="text"
+          placeholder="Search for an item."
+          onChange={(e) => {
+            setSearchText(e.target.value);
+          }}
+          onKeyDown={(e) => onKeyDown(e)}
+        />
+        <Button onClick={searchProducts} text="Search" />
+      </div>
       <div className="products-container">
         {products.map((product) => (
           <Product product={product} addToCart={props.addToCart} />
         ))}
-      </div>
-      <div className="search">
-        <input className="search-input" type="text" placeholder="item name" onChange={(e) => setSearchText(e.target.value)} />
-        <button onClick={searchProducts}>Search</button>
       </div>
     </div>
   );

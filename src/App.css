@@ -1,4 +1,9 @@
 .App {
   display: flex;
-  padding: 20px;
+  flex-direction: column;
+  padding: 100px 40px 40px 40px;
+}
+
+.product-cart-container {
+  display: flex;
 }

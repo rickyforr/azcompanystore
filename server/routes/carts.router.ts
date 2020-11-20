@@ -1,6 +1,5 @@
 import express from "express";
-import fs from "fs";
-const { writeFile, readFile } = require("helpers/fs-helpers");
+import { writeFile, readFile } from "../helpers/fs-helpers";
 
 type CartItemType = {
   id: string;
